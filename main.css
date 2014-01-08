@@ -1,0 +1,286 @@
+html {
+  background-color: #ffffff;
+  font-family: "Gotham HTF";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.titleslide {
+  background-color: white;
+  background-image: url('images/big-logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+}
+header {
+  height: 110px;
+  background-color: #ffffff;
+}
+header .reload,
+header .menu {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 32px;
+  opacity: 0.2;
+}
+header .logo {
+  transition: 1s all;
+  width: 220px;
+  height: 36px;
+  background-image: url('images/header-logo.png');
+  background-position: center;
+  position: absolute;
+  left: 50%;
+  top: 36px;
+  margin-left: -110px;
+}
+header .reload {
+  left: 50px;
+  background-image: url('images/header-reload.png');
+}
+header .menu {
+  right: 50px;
+  background-image: url('images/header-menu.png');
+}
+@media (max-width: 480px) {
+  header .logo {
+    width: 40px;
+    margin-left: -20px;
+  }
+}
+.form-container {
+  width: 300px;
+  margin-left: -150px;
+  left: 50%;
+  position: absolute;
+  bottom: -300px;
+}
+:-moz-placeholder {
+  color: #ffffff;
+}
+::-webkit-input-placeholder {
+  color: #ffffff;
+}
+form.signin > * {
+  display: block;
+  margin-bottom: 10px;
+}
+form.signin input,
+form.signin button {
+  width: 100px;
+  font-family: "Gotham HTF";
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  opacity: 1;
+  border: none;
+  padding: 15px;
+  width: 300px;
+}
+form.signin input:focus,
+form.signin button:focus {
+  outline: none;
+}
+form.signin input {
+  background-color: #000000;
+}
+form.signin button {
+  background-color: #cccccc;
+  color: #000000;
+  text-align: left;
+  cursor: pointer;
+}
+form.signin button.wrong {
+  background-color: #db4032;
+  color: #ffffff;
+}
+.balls {
+  transition: 0.25s all;
+  width: 210px;
+  height: 200px;
+  margin: 50px auto 0;
+}
+.ball {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
+  background-color: #ffffff;
+  color: #000000;
+  position: absolute;
+  box-shadow: inset 0 0 0 8px #F0F;
+}
+.ball::after {
+  display: block;
+  padding-top: 13px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.ball.b-1 {
+  box-shadow: inset 0 0 0 8px gold;
+}
+.ball.b-1::after {
+  content: '1';
+}
+.ball.b-2 {
+  box-shadow: inset 0 0 0 8px blue;
+}
+.ball.b-2::after {
+  content: '2';
+}
+.ball.b-3 {
+  box-shadow: inset 0 0 0 8px red;
+}
+.ball.b-3::after {
+  content: '3';
+}
+.ball.b-4 {
+  box-shadow: inset 0 0 0 8px purple;
+}
+.ball.b-4::after {
+  content: '4';
+}
+.ball.b-5 {
+  box-shadow: inset 0 0 0 8px orangered;
+}
+.ball.b-5::after {
+  content: '5';
+}
+.ball.b-6 {
+  box-shadow: inset 0 0 0 8px green;
+}
+.ball.b-6::after {
+  content: '6';
+}
+.ball.b-7 {
+  box-shadow: inset 0 0 0 8px darkred;
+}
+.ball.b-7::after {
+  content: '7';
+}
+.ball.b-8 {
+  box-shadow: inset 0 0 0 8px black;
+}
+.ball.b-8::after {
+  content: '8';
+}
+.ball.b-9 {
+  box-shadow: inset 0 0 0 8px gold;
+}
+.ball.b-9::after {
+  content: '9';
+}
+.ball.b-10 {
+  box-shadow: inset 0 0 0 8px blue;
+}
+.ball.b-10::after {
+  content: '10';
+}
+.ball.b-11 {
+  box-shadow: inset 0 0 0 8px red;
+}
+.ball.b-11::after {
+  content: '11';
+}
+.ball.b-12 {
+  box-shadow: inset 0 0 0 8px purple;
+}
+.ball.b-12::after {
+  content: '12';
+}
+.ball.b-13 {
+  box-shadow: inset 0 0 0 8px orangered;
+}
+.ball.b-13::after {
+  content: '13';
+}
+.ball.b-14 {
+  box-shadow: inset 0 0 0 8px green;
+}
+.ball.b-14::after {
+  content: '14';
+}
+.ball.b-15 {
+  box-shadow: inset 0 0 0 8px darkred;
+}
+.ball.b-15::after {
+  content: '15';
+}
+.ball.black {
+  box-shadow: inset 0 0 0 8px #000000;
+}
+.ball.rank {
+  display: block;
+  position: absolute;
+  margin-left: -60px;
+}
+.frame-balls {
+  display: none;
+}
+@media (max-height: 490px) {
+  .balls {
+    opacity: 0;
+  }
+}
+.break-container {
+  width: 500px;
+  margin-left: -250px;
+  left: 50%;
+  position: absolute;
+  bottom: -300px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.frame-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  z-index: -10;
+  color: white;
+}
+.frame-menu .menu {
+  padding-top: 110px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-image: url('images/menu-bkgr.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.frame-menu .frame-game {
+  display: none;
+  padding-top: 100px;
+}
+.frame-menu .frame-game .player {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 21px 0;
+}
+.frame-menu .frame-game .vs {
+  width: 42px;
+  height: 42px;
+  background: aliceblue;
+  margin: 0 auto;
+}
+.frame-menu .frame-rank {
+  display: none;
+}

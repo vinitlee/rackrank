@@ -1,0 +1,284 @@
+@black: black;
+@white: white;
+@grey: mix(@black,@white,20%);
+@warning: #DB4032;
+
+.placeholder(@color: @placeholderText) {
+	:-moz-placeholder {
+		color: @color;
+	}
+	::-webkit-input-placeholder {
+		color: @color;
+	}
+}
+
+html {
+	background-color: @white;
+	font-family: "Gotham HTF";
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.titleslide {
+	background-color: white;
+	background-image: url('images/big-logo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 100;
+}
+
+header {
+	height: 110px;
+	background-color: @white;
+
+	.reload, .menu {
+		width: 42px;
+		height: 42px;
+		position: absolute;
+		top: 32px;
+		opacity: 0.2;
+	}
+	.logo {
+		transition: 1s all;
+		width: 220px;
+		height: 36px;
+		background-image: url('images/header-logo.png');
+		background-position: center;
+		position: absolute;
+		left: 50%;
+		top: 36px;
+		margin-left: -110px;
+	}
+	.reload {
+		left: 50px;
+		background-image: url('images/header-reload.png')
+	}
+	.menu {
+		right: 50px;
+		background-image: url('images/header-menu.png')
+	}
+}
+
+@media (max-width: 480px) {
+  header {
+    .logo {
+    	width: 40px;
+    	margin-left: -20px;
+    }
+  }
+}
+
+.form-container {
+	width: 300px;
+	margin-left: -150px;
+	left:50%;
+	position: absolute;
+	bottom: -300px;
+}
+
+.placeholder(@white);
+form.signin {
+	& > * {
+		display: block;
+		margin-bottom: 10px;
+	}
+	input, button {
+		width: 100px;
+		font-family: "Gotham HTF";
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 15px;
+		letter-spacing: 2px;
+		color: @white;
+		opacity: 1;
+		border: none;
+		padding: 15px;
+		width: 300px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	input {
+		background-color: @black;
+	}
+	button {
+		background-color: @grey;
+		color:@black;
+		text-align: left;
+		cursor: pointer;
+
+		&.wrong {
+			background-color: @warning;
+			color: @white;
+		}
+	}
+}
+
+.balls {
+	transition: 0.25s all;
+	width: 42*5px;
+	height: 200px;
+	margin: 50px auto 0;
+}
+.ball {
+	display: block;
+	width: 42px;
+	height: 42px;
+	border-radius: 21px;
+	background-color: @white;
+	color: @black;
+	position: absolute;
+	box-shadow: inset 0 0 0 8px #F0F;
+
+	&::after {
+		display: block;
+		padding-top: 13px;
+		text-align: center;
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	&.b-1 {
+		box-shadow: inset 0 0 0 8px gold;
+		&::after {content:'1';}
+	}
+	&.b-2 {
+		box-shadow: inset 0 0 0 8px blue;
+		&::after {content:'2';}
+	}
+	&.b-3 {
+		box-shadow: inset 0 0 0 8px red;
+		&::after {content:'3';}
+	}
+	&.b-4 {
+		box-shadow: inset 0 0 0 8px purple;
+		&::after {content:'4';}
+	}
+	&.b-5 {
+		box-shadow: inset 0 0 0 8px orangered;
+		&::after {content:'5';}
+	}
+	&.b-6 {
+		box-shadow: inset 0 0 0 8px green;
+		&::after {content:'6';}
+	}
+	&.b-7 {
+		box-shadow: inset 0 0 0 8px darkred;
+		&::after {content:'7';}
+	}
+	&.b-8 {
+		box-shadow: inset 0 0 0 8px black;
+		&::after {content:'8';}
+	}
+	&.b-9 {
+		box-shadow: inset 0 0 0 8px gold;
+		&::after {content:'9';}
+	}
+	&.b-10 {
+		box-shadow: inset 0 0 0 8px blue;
+		&::after {content:'10';}
+	}
+	&.b-11 {
+		box-shadow: inset 0 0 0 8px red;
+		&::after {content:'11';}
+	}
+	&.b-12 {
+		box-shadow: inset 0 0 0 8px purple;
+		&::after {content:'12';}
+	}
+	&.b-13 {
+		box-shadow: inset 0 0 0 8px orangered;
+		&::after {content:'13';}
+	}
+	&.b-14 {
+		box-shadow: inset 0 0 0 8px green;
+		&::after {content:'14';}
+	}
+	&.b-15 {
+		box-shadow: inset 0 0 0 8px darkred;
+		&::after {content:'15';}
+	}
+	&.black {
+		box-shadow: inset 0 0 0 8px @black;
+	}
+
+	&.rank {
+		display: block;
+		position: absolute;
+		margin-left: -60px;
+	}
+}
+
+.frame-balls {
+	display: none;
+}
+
+@media (max-height: 490px) {
+  .balls {
+  	opacity: 0;
+  }
+}
+
+.break-container {
+	width: 500px;
+	margin-left: -250px;
+	left:50%;
+	position: absolute;
+	bottom: -300px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.frame-menu {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:100%;
+	z-index: -10;
+	color: white;
+	.menu {
+		padding-top: 110px;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		background-image: url('images/menu-bkgr.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.frame-game {
+		display: none;
+
+		padding-top: 100px;
+
+		.player {
+			width: 300px;
+			margin: 0 auto;
+			text-align: center;
+			letter-spacing: 2px;
+			padding: 21px 0;
+		}
+		.vs {
+			width: 42px;
+			height: 42px;
+			background: aliceblue;
+			margin: 0 auto;
+		}
+	}
+	.frame-rank {
+		display: none;
+	}
+}
