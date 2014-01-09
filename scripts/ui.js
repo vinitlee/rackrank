@@ -54,6 +54,7 @@
 	}
 
 	$('#signin_go').click(function (e) {
+	    e.preventDefault()
 		// !!! Add in user verification here
 		if (true) {
 			deactivate_slide_signin(activate_slide_ready);
