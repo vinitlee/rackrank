@@ -25,6 +25,8 @@ body {
 header {
   height: 110px;
   background-color: #ffffff;
+  position: relative;
+  z-index: 10;
 }
 header .reload,
 header .menu {
@@ -72,12 +74,12 @@ header .menu {
 ::-webkit-input-placeholder {
   color: #ffffff;
 }
-form.signin > * {
+.signin > * {
   display: block;
   margin-bottom: 10px;
 }
-form.signin input,
-form.signin button {
+.signin input,
+.signin button {
   width: 100px;
   font-family: "Gotham HTF";
   text-transform: uppercase;
@@ -90,20 +92,20 @@ form.signin button {
   padding: 15px;
   width: 300px;
 }
-form.signin input:focus,
-form.signin button:focus {
+.signin input:focus,
+.signin button:focus {
   outline: none;
 }
-form.signin input {
+.signin input {
   background-color: #000000;
 }
-form.signin button {
+.signin button {
   background-color: #cccccc;
   color: #000000;
   text-align: left;
   cursor: pointer;
 }
-form.signin button.wrong {
+.signin button.wrong {
   background-color: #db4032;
   color: #ffffff;
 }
@@ -251,7 +253,7 @@ form.signin button.wrong {
   width: 100%;
   height: 100%;
   top: 100%;
-  z-index: -10;
+  z-index: 2;
   color: white;
 }
 .frame-menu .menu {
@@ -274,6 +276,9 @@ form.signin button.wrong {
   text-align: center;
   letter-spacing: 2px;
   padding: 21px 0;
+}
+.frame-menu .frame-game .player .playername {
+  line-height: 42px;
 }
 .frame-menu .frame-game .vs {
   width: 42px;

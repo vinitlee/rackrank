@@ -41,6 +41,8 @@ html,body {
 header {
 	height: 110px;
 	background-color: @white;
+	position: relative;
+	z-index: 10;
 
 	.reload, .menu {
 		width: 42px;
@@ -88,7 +90,7 @@ header {
 }
 
 .placeholder(@white);
-form.signin {
+.signin {
 	& > * {
 		display: block;
 		margin-bottom: 10px;
@@ -247,7 +249,7 @@ form.signin {
 	width: 100%;
 	height: 100%;
 	top:100%;
-	z-index: -10;
+	z-index: 2;
 	color: white;
 	.menu {
 		padding-top: 110px;
@@ -270,6 +272,10 @@ form.signin {
 			text-align: center;
 			letter-spacing: 2px;
 			padding: 21px 0;
+
+			.playername {
+				line-height: 42px;
+			}
 		}
 		.vs {
 			width: 42px;
